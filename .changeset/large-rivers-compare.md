@@ -1,5 +1,0 @@
----
-"demo-changesets": patch
----
-
-Demo
