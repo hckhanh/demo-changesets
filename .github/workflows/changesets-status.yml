@@ -8,11 +8,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: latest
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
           cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm changeset status --since=main
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Check changeset status
+        run: pnpm changeset status --since=main
