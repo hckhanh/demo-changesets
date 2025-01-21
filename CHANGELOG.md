@@ -1,5 +1,14 @@
 # demo-changesets
 
+## 1.1.2
+
+### Patch Changes
+
+- b2377c7: Update changesets configs:
+
+  - Use local configs schema instead of remote configs
+  - Revert changelog back to Changesets CLI
+
 ## 1.1.1
 
 ### Patch Changes
